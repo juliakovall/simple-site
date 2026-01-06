@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -5,6 +9,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #727272;
+  margin: 0;
 }
 
 h1,
@@ -15,28 +20,27 @@ h5,
 h6,
 p {
   margin: 0;
-  background-color: #f9f9f9;
 }
 
-.about-me {
-  width: 540px;
-  text-align: center;
-  margin: 112px auto 100px;
+ul {
+  padding: 0;
+  margin: 0;
 }
 
-.about-me__title {
-  font-size: 32px;
-  font-weight: 500;
-  margin: 0 0 50px 0;
+li {
+  list-style: none;
 }
 
-.about-me__text {
-  color: #727272;
-  font-size: 16px;
-  margin: 53px 0 0 0;
+a {
+  text-decoration: none;
 }
 
-.button {
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+/* .button {
   background-color: rgba(52, 84, 122, 1);
   width: 225px;
   color: rgba(255, 255, 255, 1);
@@ -62,26 +66,90 @@ a {
 }
 .rectangle {
   background-color: rgba(238, 239, 241, 1);
+} */
+
+/* Section Hero */
+.hero {
+  background-color: #eeeff1;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
+.header {
+  padding: 80px 0 115px;
+}
+.header_items {
+  display: flex;
+  gap: 50px;
+}
+.header_item:hover {
+  transition: all 0.5s;
+  transform: scale(1.15);
 }
 
-li {
-  list-style: none;
+.header_link {
+  color: black;
+  letter-spacing: 10%;
+}
+.header_link:hover {
+  color: red;
+  transition: all 0.5s;
 }
 
-a {
-  text-decoration: none;
+.hero_title {
+  font-weight: 500;
+  font-size: 48px;
+  color: black;
+  margin-bottom: 60px;
 }
 
-.container {
-  max-width: 1110px;
-  margin: 0 auto;
+.hero_desc {
+  width: 540px;
+  margin-bottom: 60px;
 }
 
+.header_button {
+  background-color: #34547a;
+  padding: 15px 40px;
+  color: white;
+  border: none;
+  letter-spacing: 1.6px;
+  margin-bottom: 140px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.header_button:hover {
+  background-color: #0f71e7;
+  transition: all 0.5s;
+  transform: scale(1.15);
+  border-radius: 50px;
+}
+/* Section Hero */
+
+/* Section about */
+.about {
+  background-color: #eeeff1;
+}
+
+.about_content {
+  width: 540px;
+  padding-block: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-me__title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  font-size: 32px;
+  color: black;
+}
+
+.about-me__text {
+  color: #727272;
+}
+/* Section about
+
+/* Section icon */
 .section_icon {
   background-color: #34547a;
   padding-block: 100px;
@@ -117,3 +185,4 @@ a {
   font-size: 21px;
   font-weight: 500;
 }
+/* Section icon */
