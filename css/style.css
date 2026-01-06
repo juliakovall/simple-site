@@ -26,6 +26,9 @@ h1 {
 .menu-item {
   margin-right: 51px;
 }
+.rectangle {
+  background-color: rgba(238, 239, 241, 1);
+}
 
 ul {
   padding: 0;
