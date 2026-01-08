@@ -2,7 +2,6 @@
   --bg-color-one: #eeeff1;
   --bg-color-second: #34547a;
   --bg-color-third: #eeeff187;
-  --hover-color: red;
   --title-color: black;
   --text-color: #727272;
   --white-text: white;
@@ -98,7 +97,6 @@ a {
   cursor: pointer;
 }
 .header_button:hover {
-  background-color: var(--hover-color);
   transition: all 0.5s;
   transform: scale(1.15);
   border-radius: 15px;
@@ -203,7 +201,7 @@ a {
 .play_button:hover {
   transform: scale(1.15);
   transition: all 0.5s;
-  background-color: var(--hover-color);
+  background-color: var(--bg-color-second);
   border-radius: 50%;
 }
 /* How_I_Work section */
