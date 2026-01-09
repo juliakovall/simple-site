@@ -42,6 +42,7 @@ li {
 
 a {
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .container {
@@ -52,51 +53,55 @@ a {
 /* Section Hero */
 .hero {
   background-color: var(--bg-color-one);
+  padding-bottom: 140px;
 }
 
 .header {
   padding: 80px 0 115px;
 }
-.header_items {
+.header__items {
   display: flex;
   gap: 50px;
 }
-.header_item:hover {
+.header__item:hover {
   transition: all 0.5s;
   transform: scale(1.15);
 }
 
-.header_link {
+.header__link {
   color: var(--title-color);
-  letter-spacing: 10%;
+  letter-spacing: 2px;
 }
-.header_link:hover {
+.header__link:hover {
+  color: var(--bg-color-second);
+  transition: all 0.5s;
+}
+.header__link--active {
   color: var(--bg-color-second);
   transition: all 0.5s;
 }
 
-.hero_title {
+.hero__title {
   font-weight: 500;
   font-size: 48px;
   color: var(--title-color);
   margin-bottom: 60px;
 }
 
-.hero_desc {
+.hero__desc {
   width: 540px;
   margin-bottom: 60px;
 }
 
-.header_button {
+.header__button {
   background-color: var(--bg-color-second);
   padding: 15px 40px;
   color: var(--white-text);
   border: none;
   letter-spacing: 1.6px;
-  margin-bottom: 140px;
   cursor: pointer;
 }
-.header_button:hover {
+.header__button:hover {
   transition: all 0.5s;
   transform: scale(1.15);
   border-radius: 15px;
@@ -124,45 +129,45 @@ a {
 /* Section about
 
 /* Section icon */
-.section_icon {
+.section-icon {
   background-color: var(--bg-color-second);
   padding-block: 100px;
 }
 
-.ul_flex {
+.section-icon__items {
   display: flex;
   gap: 45px;
   justify-content: space-between;
 }
 
-.li_flex {
+.section-icon__item {
   display: flex;
   gap: 20px;
   transition: all 0.5s;
   align-items: center;
 }
-.li_flex:hover {
+.section-icon__item:hover {
   transform: scale(1.15);
   transition: all 0.5s;
 }
 
-.span_flex {
+.icon-text {
   display: flex;
   flex-direction: column;
 }
 
-.span_text {
+.icon-text__span {
   color: var(--white-text);
 }
 
-.span_size_one {
+.icon-text__span-size-one {
   font-size: 21px;
   font-weight: 500;
 }
 /* Section icon */
 
 /* How_I_Work section */
-.section_how_i_work {
+.section-how-i-work {
   background-color: var(--bg-color-one);
 }
 
@@ -173,24 +178,24 @@ a {
   padding: 100px 0px 55px;
 }
 
-.how_i_work {
+.section-how-i-work__title {
   font-size: 32px;
   font-weight: 500;
   color: var(--title-color);
   margin-bottom: 50px;
 }
 
-.video_block {
+.video-block {
   position: relative;
 }
 
-.video_player {
+.video-block__player {
   max-width: 100%;
   display: block;
   padding-bottom: 100px;
 }
 
-.play_button {
+.video-block__play-button {
   position: absolute;
   top: 35%;
   left: 45%;
@@ -198,7 +203,7 @@ a {
   height: 100px;
   cursor: pointer;
 }
-.play_button:hover {
+.video-block__play-button:hover {
   transform: scale(1.15);
   transition: all 0.5s;
   background-color: var(--bg-color-second);
@@ -211,18 +216,18 @@ a {
   background-color: var(--bg-color-second);
 }
 
-.footer_content {
+.footer-block__content {
   padding-block: 50px;
 }
 
-.name {
+.footer-block__name {
   color: var(--white-text);
   line-height: 1.5;
   font-size: 21px;
   margin-bottom: 20px;
 }
 
-.copyright {
+.footer-block__copyright {
   color: var(--white-text);
   line-height: 1.5;
 }
