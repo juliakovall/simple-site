@@ -272,8 +272,9 @@ a {
   }
 
   .header__items {
-    gap: 15px;
-    justify-content: center;
+    /* gap: 15px;
+    justify-content: center; */
+    display: none;
   }
 
   .header__link {
@@ -321,5 +322,12 @@ a {
   .section-icon__item:hover,
   .header__button:hover {
     transform: none;
+  }
+}
+@media (max-width: 425px) {
+  .header__items {
+    /* gap: 15px;
+    justify-content: center; */
+    display: none;
   }
 }
