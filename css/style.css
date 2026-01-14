@@ -63,6 +63,8 @@ a {
 .header__items {
   display: flex;
   gap: 50px;
+  flex-wrap: wrap;
+  row-gap: 15px;
 }
 .header__item:hover {
   transition: all 0.5s;
@@ -90,8 +92,9 @@ a {
 }
 
 .hero__desc {
-  width: 540px;
+  /* width: 540px; */
   margin-bottom: 60px;
+  max-width: 540px;
 }
 
 .header__button {
@@ -115,9 +118,9 @@ a {
 }
 
 .about-me__content {
-  width: 540px;
-  padding-block: 100px;
-  margin: auto;
+  max-width: 540px;
+  padding: 100px 20px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -139,6 +142,7 @@ a {
   display: flex;
   gap: 45px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .section-icon__item {
@@ -173,7 +177,9 @@ a {
 }
 
 .video {
-  width: 540px;
+  /* width: 540px; */
+
+  max-width: 540px;
   text-align: center;
   margin: 0 auto;
   padding: 100px 0px 55px;
@@ -188,29 +194,26 @@ a {
 
 .video-block {
   position: relative;
+  margin-bottom: 100px;
 }
 
 .video-block__player {
   max-width: 100%;
   display: block;
-  padding-bottom: 100px;
 }
 
 .video-block__play-button {
   position: absolute;
-  top: 35%;
-  left: 45%;
+  /* top: 35%;
+  left: 45%; */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
   cursor: pointer;
 }
-.about-me__content {
-  max-width: 540px;
-  width: 100%;
-  padding: 100px 20px;
-  margin: 0 auto;
-  text-align: center;
-}
+
 .video-block__play-button:hover {
   transform: scale(1.15);
   transition: all 0.5s;
@@ -245,47 +248,37 @@ a {
   .header {
     padding: 40px 0 60px;
   }
-
   .hero {
     padding-bottom: 80px;
   }
-
   .hero__title {
     font-size: 36px;
     margin-bottom: 25px;
   }
 
-  .hero__desc {
-    width: 100%;
-    max-width: 540px;
-    margin-bottom: 30px;
-  }
-  .about-me__content {
-    padding: 70px 20px;
-  }
-
-  .section-icon {
-    padding-block: 70px;
-  }
-
-  .video {
-    width: 100%;
-    max-width: 540px;
-    padding: 70px 0 40px;
-  }
-
-  .footer-block__content {
-    padding-block: 40px;
+  .section-icon__items {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
   }
 }
 @media (max-width: 375px) {
   .container {
     padding: 0 15px;
   }
-}
-@media (max-width: 375px) {
+
   .header {
     padding: 25px 0 35px;
+  }
+
+  .header__items {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .header__link {
+    font-size: 14px;
+    letter-spacing: 1px;
   }
 
   .hero {
@@ -302,23 +295,31 @@ a {
     margin-bottom: 25px;
   }
 
-  .header__button {
-    padding: 12px 20px;
-  }
-
   .about-me__content {
-    padding: 50px 15px;
-  }
-
-  .section-icon {
+    padding-left: 15px;
+    padding-right: 15px;
     padding-block: 50px;
   }
 
-  .video {
-    padding: 50px 0 25px;
+  .section-icon__item {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .video-block__play-button {
+    width: 55px;
+    height: 55px;
   }
 
   .footer-block__content {
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .header__item:hover,
+  .section-icon__item:hover,
+  .header__button:hover {
+    transform: none;
   }
 }
