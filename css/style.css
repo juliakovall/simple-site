@@ -232,3 +232,53 @@ a {
   line-height: 1.5;
 }
 /* Footer */
+@media (max-width: 768px) {
+  .header {
+    padding: 40px 0 60px;
+  }
+
+  .hero {
+    padding-bottom: 80px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  .hero__desc {
+    width: 100%;
+    max-width: 540px;
+    margin-bottom: 30px;
+  }
+
+  .header__items {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .section-icon__items {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .about-me__content {
+    width: 100%;
+    max-width: 540px;
+    padding-block: 70px;
+  }
+
+  .video {
+    width: 100%;
+    max-width: 540px;
+    padding: 70px 0 40px;
+  }
+
+  .video-block__play-button {
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
