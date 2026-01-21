@@ -1,0 +1,18 @@
+@use "./variables" as variables;
+
+.hero {
+  background-color: variables.$bg-color-one;
+  padding-bottom: 60px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 48px;
+    color: variables.$title-color;
+    margin-bottom: 60px;
+  }
+
+  &__desc {
+    max-width: 540px;
+    margin-bottom: 60px;
+  }
+}

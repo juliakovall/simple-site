@@ -1,0 +1,35 @@
+@use "./variables" as variables;
+@use "./mixins" as m;
+
+.section-icon {
+  background-color: variables.$bg-color-second;
+  padding-block: 100px;
+
+  &__items {
+    display: flex;
+    gap: 45px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    @include m.hover-scale;
+  }
+}
+
+.icon-text {
+  display: flex;
+  flex-direction: column;
+
+  &__span {
+    color: variables.$white-text;
+  }
+
+  &__span-size-one {
+    font-size: 21px;
+    font-weight: 500;
+  }
+}

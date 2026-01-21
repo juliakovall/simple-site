@@ -1,0 +1,19 @@
+@use "./variables" as variables;
+
+.about-me {
+  background-color: variables.$bg-color-third;
+
+  &__content {
+    max-width: 540px;
+    padding: 100px 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: variables.$title-color;
+  }
+}

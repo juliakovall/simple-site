@@ -1,0 +1,36 @@
+@use "./variables" as variables;
+@use "./mixins" as m;
+
+.header {
+  padding: 80px 0 115px;
+
+  &__items {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    @include m.hover-scale;
+  }
+
+  &__link {
+    color: variables.$title-color;
+    letter-spacing: 2px;
+
+    &--active,
+    &:hover {
+      color: variables.$bg-color-second;
+    }
+  }
+
+  &__button {
+    @include m.button-base;
+    @include m.hover-scale;
+    background-color: variables.$bg-color-second;
+    color: variables.$white-text;
+    letter-spacing: 1.6px;
+
+    &:hover {
+      border-radius: 15px;
+    }
+  }
+}

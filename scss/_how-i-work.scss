@@ -1,0 +1,46 @@
+@use "./variables" as variables;
+@use "./mixins" as m;
+
+.section-how-i-work {
+  background-color: variables.$bg-color-one;
+}
+
+.video {
+  max-width: 540px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 100px 0 55px;
+}
+
+.section-how-i-work__title {
+  font-size: 32px;
+  font-weight: 500;
+  color: variables.$title-color;
+  margin-bottom: 50px;
+}
+
+.video-block {
+  position: relative;
+  margin-bottom: 100px;
+
+  &__player {
+    max-width: 100%;
+    display: block;
+  }
+
+  &__play-button {
+    @include m.hover-scale;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: variables.$bg-color-second;
+    }
+  }
+}
