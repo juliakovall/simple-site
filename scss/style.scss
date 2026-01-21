@@ -1,4 +1,5 @@
-@use "./variables";
+@use "./variables" as variables;
+@use "./mixins" as m;
 
 html {
   scroll-behavior: smooth;
@@ -44,129 +45,113 @@ a {
   padding: 0 20px;
 }
 
-/* Section Hero */
 .hero {
-  background-color: var(--bg-color-one);
-  padding-bottom: 140px;
+  background-color: variables.$bg-color-one;
+  padding-bottom: 60px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 48px;
+    color: variables.$title-color;
+    margin-bottom: 60px;
+  }
+
+  &__desc {
+    max-width: 540px;
+    margin-bottom: 60px;
+  }
 }
 
 .header {
   padding: 80px 0 115px;
-}
-.header__items {
-  display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
-  row-gap: 15px;
-}
-.header__item:hover {
-  transition: all 0.5s;
-  transform: scale(1.15);
-}
 
-.header__link {
-  color: var(--title-color);
-  letter-spacing: 2px;
-}
-.header__link:hover {
-  color: var(--bg-color-second);
-  transition: all 0.5s;
-}
-.header__link--active {
-  color: var(--bg-color-second);
-  transition: all 0.5s;
-}
+  &__items {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    @include m.hover-scale;
+  }
 
-.hero__title {
-  font-weight: 500;
-  font-size: 48px;
-  color: var(--title-color);
-  margin-bottom: 60px;
-}
+  &__link {
+    color: variables.$title-color;
+    letter-spacing: 2px;
 
-.hero__desc {
-  /* width: 540px; */
-  margin-bottom: 60px;
-  max-width: 540px;
-}
+    &--active {
+      color: variables.$bg-color-second;
+    }
 
-.header__button {
-  background-color: var(--bg-color-second);
-  padding: 15px 40px;
-  color: var(--white-text);
-  border: none;
-  letter-spacing: 1.6px;
-  cursor: pointer;
+    &:hover {
+      color: variables.$bg-color-second;
+    }
+  }
+
+  &__button {
+    @include m.hover-scale;
+    @include m.button-base;
+    background-color: variables.$bg-color-second;
+    color: variables.$white-text;
+    letter-spacing: 1.6px;
+
+    &:hover {
+      border-radius: 15px;
+    }
+  }
 }
-.header__button:hover {
-  transition: all 0.5s;
-  transform: scale(1.15);
-  border-radius: 15px;
-}
-/* Section Hero */
 
 /* Section about */
 .about-me {
-  background-color: var(--bg-color-third);
-}
+  background-color: variables.$bg-color-third;
 
-.about-me__content {
-  max-width: 540px;
-  padding: 100px 20px;
-  margin: 0 auto;
-  text-align: center;
+  &__content {
+    max-width: 540px;
+    padding: 100px 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: variables.$title-color;
+  }
 }
-
-.about-me__title {
-  font-size: 32px;
-  font-weight: 500;
-  margin-bottom: 50px;
-  color: var(--title-color);
-}
-/* Section about
-
 /* Section icon */
+
 .section-icon {
-  background-color: var(--bg-color-second);
+  background-color: variables.$bg-color-second;
   padding-block: 100px;
-}
+  &__items {
+    display: flex;
+    gap: 45px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 
-.section-icon__items {
-  display: flex;
-  gap: 45px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.section-icon__item {
-  display: flex;
-  gap: 20px;
-  transition: all 0.5s;
-  align-items: center;
-}
-.section-icon__item:hover {
-  transform: scale(1.15);
-  transition: all 0.5s;
+    @include m.hover-scale;
+  }
 }
 
 .icon-text {
   display: flex;
   flex-direction: column;
-}
+  &__span {
+    color: variables.$white-text;
+  }
 
-.icon-text__span {
-  color: var(--white-text);
+  &__span-size-one {
+    font-size: 21px;
+    font-weight: 500;
+  }
 }
-
-.icon-text__span-size-one {
-  font-size: 21px;
-  font-weight: 500;
-}
-/* Section icon */
 
 /* How_I_Work section */
 .section-how-i-work {
-  background-color: var(--bg-color-one);
+  background-color: variables.$bg-color-one;
 }
 
 .video {
@@ -181,60 +166,53 @@ a {
 .section-how-i-work__title {
   font-size: 32px;
   font-weight: 500;
-  color: var(--title-color);
+  color: variables.$title-color;
   margin-bottom: 50px;
 }
 
 .video-block {
   position: relative;
   margin-bottom: 100px;
-}
+  &__player {
+    max-width: 100%;
+    display: block;
+  }
+  &__play-button {
+    @include m.hover-scale;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
 
-.video-block__player {
-  max-width: 100%;
-  display: block;
+    &:hover {
+      background-color: variables.$bg-color-second;
+    }
+  }
 }
-
-.video-block__play-button {
-  position: absolute;
-  /* top: 35%;
-  left: 45%; */
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
-
-.video-block__play-button:hover {
-  transform: scale(1.15);
-  transition: all 0.5s;
-  background-color: var(--bg-color-second);
-  border-radius: 50%;
-}
-/* How_I_Work section */
 
 /* Footer */
 .footer-block {
-  background-color: var(--bg-color-second);
+  background-color: variables.$bg-color-second;
+
+  &__content {
+    padding-block: 50px;
+  }
+  &__name {
+    color: variables.$white-text;
+    line-height: 1.5;
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+  &__copyright {
+    color: variables.$white-text;
+    line-height: 1.5;
+  }
 }
 
-.footer-block__content {
-  padding-block: 50px;
-}
-
-.footer-block__name {
-  color: var(--white-text);
-  line-height: 1.5;
-  font-size: 21px;
-  margin-bottom: 20px;
-}
-
-.footer-block__copyright {
-  color: var(--white-text);
-  line-height: 1.5;
-}
 /* Footer */
 
 @media (max-width: 768px) {
@@ -262,31 +240,13 @@ a {
 
   .header {
     padding: 25px 0 35px;
-  }
-
-  .header__items {
-    /* gap: 15px;
-    justify-content: center; */
-    display: none;
-  }
-
-  .header__link {
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-
-  .hero {
-    padding-bottom: 60px;
-  }
-
-  .hero__title {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-
-  .hero__desc {
-    font-size: 14px;
-    margin-bottom: 25px;
+    &__items {
+      display: none;
+    }
+    &__link {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
   }
 
   .about-me__content {
@@ -319,8 +279,6 @@ a {
 }
 @media (max-width: 425px) {
   .header__items {
-    /* gap: 15px;
-    justify-content: center; */
     display: none;
   }
 }

@@ -1,0 +1,15 @@
+@mixin hover-scale($scale: 1.15) {
+  transition: all 0.5s;
+
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin button-base {
+  padding: 15px 40px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+}
